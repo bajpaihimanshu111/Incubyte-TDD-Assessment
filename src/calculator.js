@@ -4,8 +4,9 @@ class Calculator {
         if (numbers === "") {
             return 0;
         }
-        
-        const numberArray = numbers.split(',').map(Number);
+    
+        // Split the input string based on commas and new lines
+        const numberArray = numbers.split(/,|\n/).map(Number);
         return numberArray.reduce((sum, number) => sum + number, 0);
     }
   }
