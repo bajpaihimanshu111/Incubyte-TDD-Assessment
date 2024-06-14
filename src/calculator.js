@@ -15,6 +15,13 @@ class Calculator {
     
         // Split the input string based on the custom delimiter
         const numberArray = numbers.split(new RegExp(`${delimiter}|\n`)).map(Number);
+        
+        // Check for negative numbers
+        const negativeNumbers = numberArray.filter(number => number < 0);
+        if (negativeNumbers.length > 0) {
+            throw new Error(`Negative numbers not allowed: ${negativeNumbers.join(', ')}`);
+        }
+        
         return numberArray.reduce((sum, number) => sum + number, 0);
     }
 }
