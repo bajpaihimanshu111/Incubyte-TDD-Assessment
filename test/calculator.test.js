@@ -24,4 +24,8 @@ describe('String Calculator', () => {
         expect(calculator.add("1\n2,3")).toBe(6);
         expect(calculator.add("1\n2\n3")).toBe(6);
     });
+
+    test('should return the sum of numbers with delimiter in the string', () => {
+        expect(calculator.add("//;\n1;2")).toBe(3);
+    });
 });
