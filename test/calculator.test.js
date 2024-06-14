@@ -17,5 +17,6 @@ describe('String Calculator', () => {
 
     test('should return the sum of n numbers', () => {
         expect(calculator.add("1,2,3,4")).toBe(10);
+        expect(calculator.add("5,4,7,3,2,9,76,54")).toBe(160);
     });
 });
