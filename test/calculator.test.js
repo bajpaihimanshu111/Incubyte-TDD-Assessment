@@ -28,4 +28,8 @@ describe('String Calculator', () => {
     test('should return the sum of numbers with delimiter in the string', () => {
         expect(calculator.add("//;\n1;2")).toBe(3);
     });
+
+    test('should return an exception when negative number in the string', () => {
+        expect(calculator.add("1,2,-3,4")).toBe(4);
+    });
 });
