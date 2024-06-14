@@ -19,4 +19,9 @@ describe('String Calculator', () => {
         expect(calculator.add("1,2,3,4")).toBe(10);
         expect(calculator.add("5,4,7,3,2,9,76,54")).toBe(160);
     });
+
+    test('should return the sum of numbers with new line in the string', () => {
+        expect(calculator.add("1\n2,3")).toBe(6);
+        expect(calculator.add("1\n2\n3")).toBe(6);
+    });
 });
